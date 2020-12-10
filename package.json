@@ -23,6 +23,14 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "eslintConfig": {
+    "extends": [
+      "@map-colonies/eslint-config/ts-base"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  },
   "files": [
     "dist/**/*"
   ],
