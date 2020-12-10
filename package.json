@@ -1,5 +1,5 @@
 {
-  "name": "node-osm-elements",
+  "name": "@map-colonies/node-osm-elements",
   "version": "1.0.0",
   "description": "TypeScript and JavaScript classes for osm elements",
   "main": "index.ts",
