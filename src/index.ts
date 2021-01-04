@@ -14,7 +14,7 @@ interface OsmNode extends BaseElement {
   lon: number;
 }
 
-interface OmsWay extends BaseElement {
+interface OsmWay extends BaseElement {
   type: 'way';
   nodes: OsmNode[];
 }
@@ -40,4 +40,4 @@ interface OsmChange {
   delete?: BaseElement[];
 }
 
-export { BaseElement, OsmNode, OmsWay, OsmRelation, Changeset, OsmChange };
+export { BaseElement, OsmNode, OsmWay as OmsWay, OsmRelation, Changeset, OsmChange };
