@@ -2,9 +2,11 @@
   "name": "@map-colonies/node-osm-elements",
   "version": "1.0.0",
   "description": "TypeScript and JavaScript classes for osm elements",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "lint": "eslint \"src/**/*.ts\"",
     "release": "standard-version",
     "build": "tsc --project tsbuildconfig.json"
