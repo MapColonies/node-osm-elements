@@ -40,4 +40,4 @@ interface OsmChange {
   delete?: BaseElement[];
 }
 
-export { BaseElement, OsmNode, OsmWay as OmsWay, OsmRelation, Changeset, OsmChange };
+export { BaseElement, OsmNode, OsmWay, OsmRelation, Changeset, OsmChange };
