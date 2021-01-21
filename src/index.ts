@@ -1,5 +1,10 @@
+enum Types {
+  NODE = 'node',
+  WAY = 'way',
+  RELATION = 'relation',
+}
 interface BaseElement {
-  type: 'node' | 'way' | 'relation';
+  type: Types.NODE | Types.WAY | Types.RELATION;
   id: number;
   timestamp?: string;
   version?: number;
@@ -9,14 +14,19 @@ interface BaseElement {
 }
 
 interface OsmNode extends BaseElement {
-  type: 'node';
+  type: Types.NODE;
   lat: number;
   lon: number;
 }
 
 interface OsmWay extends BaseElement {
-  type: 'way';
+  type: Types.WAY;
   nodes: OsmNode[];
+}
+
+interface OsmApiWay extends BaseElement {
+  type: Types.WAY;
+  nodes: number[];
 }
 
 type Member = BaseElement & {
@@ -24,9 +34,10 @@ type Member = BaseElement & {
 };
 
 interface OsmRelation extends BaseElement {
-  type: 'relation';
+  type: Types.RELATION;
   members?: Member[];
 }
+
 interface Changeset {
   type: 'changeset';
   version?: string;
@@ -43,4 +54,4 @@ interface OsmChange {
   delete?: BaseElement[];
 }
 
-export { BaseElement, OsmNode, OsmWay, OsmRelation, Changeset, OsmChange, Member };
+export { BaseElement, OsmNode, OsmWay, OsmApiWay, OsmRelation, Changeset, OsmChange, Member };
