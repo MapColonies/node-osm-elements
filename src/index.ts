@@ -19,11 +19,14 @@ interface OsmWay extends BaseElement {
   nodes: OsmNode[];
 }
 
+type Member = BaseElement & {
+  role?: string;
+};
+
 interface OsmRelation extends BaseElement {
   type: 'relation';
-  members?: BaseElement & { role?: string };
+  members?: Member[];
 }
-
 interface Changeset {
   type: 'changeset';
   version?: string;
@@ -40,4 +43,4 @@ interface OsmChange {
   delete?: BaseElement[];
 }
 
-export { BaseElement, OsmNode, OsmWay, OsmRelation, Changeset, OsmChange };
+export { BaseElement, OsmNode, OsmWay, OsmRelation, Changeset, OsmChange, Member };
