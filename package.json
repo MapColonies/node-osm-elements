@@ -4,10 +4,11 @@
   "description": "TypeScript and JavaScript classes for osm elements",
   "main": "dist/index.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\"",
-    "prettier": "prettier --check .",
-    "prettier:fix": "prettier --write .",
-    "lint": "eslint \"src/**/*.ts\"",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "prelint:fix": "npm run format:fix",
+    "prelint": "npm run format",
+    "lint": "eslint .",
     "release": "standard-version",
     "test": "jest --config=./tests/configurations/jest.config.js",
     "build": "tsc --project tsbuildconfig.json"
@@ -24,14 +25,6 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "@map-colonies/eslint-config/ts-base"
-    ],
-    "parserOptions": {
-      "project": "./tsconfig.json"
     }
   },
   "files": [
