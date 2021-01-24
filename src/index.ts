@@ -54,4 +54,4 @@ interface OsmChange {
   delete?: BaseElement[];
 }
 
-export { BaseElement, OsmNode, OsmWay, OsmApiWay, OsmRelation, Changeset, OsmChange, Member };
+export { BaseElement, OsmNode, OsmWay, OsmApiWay, OsmRelation, Changeset, OsmChange, Member, Types };

@@ -12,7 +12,7 @@ const isNode = (element: BaseElement): element is OsmNode => element.type === Ty
 export const parseOsmWayApi = (elements: (OsmApiWay|OsmNode)[]): OsmWay | undefined => {
     const apiWay = elements.find(isWay);
     const nodes = elements.filter(isNode);
-    if (apiWay === undefined || nodes === undefined) {
+    if (apiWay === undefined || nodes.length === 0) {
         return undefined;
     }
 
