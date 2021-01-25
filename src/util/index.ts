@@ -1,8 +1,8 @@
-import { BaseElement, OsmNode, OsmWay, OsmApiWay, Types } from '..';
+import { BaseElement, OsmNode, OsmWay, OsmApiWay, OsmTypes } from '..';
 
-const isWay = (element: BaseElement): element is OsmApiWay => element.type === Types.WAY;
+const isWay = (element: BaseElement): element is OsmApiWay => element.type === OsmTypes.WAY;
 
-const isNode = (element: BaseElement): element is OsmNode => element.type === Types.NODE;
+const isNode = (element: BaseElement): element is OsmNode => element.type === OsmTypes.NODE;
 
 /**
  * Parses the response of the /api/0.6/way/#id/full from OsmApiWay representation to OsmWay one.

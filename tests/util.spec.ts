@@ -1,8 +1,8 @@
-import { OsmApiWay, OsmNode, OsmWay, Types } from '../src';
-import { parseOsmWayApi } from '../src/util/util';
+import { OsmApiWay, OsmNode, OsmWay, OsmTypes } from '../src';
+import { parseOsmWayApi } from '../src/util';
 
 const osmApiWay: OsmApiWay = {
-  type: Types.WAY,
+  type: OsmTypes.WAY,
   id: 1,
   timestamp: '2019-02-14T07:33:10Z',
   version: 1,
@@ -12,7 +12,7 @@ const osmApiWay: OsmApiWay = {
 };
 const osmNodes = osmApiWay.nodes.map((nodeId) => {
   const osmNode: OsmNode = {
-    type: Types.NODE,
+    type: OsmTypes.NODE,
     id: nodeId,
     lat: 35,
     lon: 36,
