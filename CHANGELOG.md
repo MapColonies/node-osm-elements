@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/MapColonies/node-osm-elements/compare/v2.0.2...v2.1.0) (2021-01-25)
+
+
+### Features
+
+* **way:** parse osmApiWay to osmWay ([#20](https://github.com/MapColonies/node-osm-elements/issues/20)) ([720278b](https://github.com/MapColonies/node-osm-elements/commit/720278bdec92adacb2514e897e7cd7eee1073d5f))
+
 ### 2.0.2 (2021-01-21)
 
 
