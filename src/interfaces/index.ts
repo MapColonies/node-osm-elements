@@ -1,13 +1,7 @@
-enum OsmTypes {
-  NODE = 'node',
-  WAY = 'way',
-  RELATION = 'relation',
-  OSMCHANGE = 'osmchange',
-  CHANGESET = 'changeset',
-}
+type OsmElementType = 'node' | 'way' | 'relation';
 
 interface BaseElement {
-  type: OsmTypes.NODE | OsmTypes.WAY | OsmTypes.RELATION;
+  type: OsmElementType;
   id: number;
   timestamp?: string;
   version?: number;
@@ -17,18 +11,18 @@ interface BaseElement {
 }
 
 interface OsmNode extends BaseElement {
-  type: OsmTypes.NODE;
+  type: 'node';
   lat: number;
   lon: number;
 }
 
 interface OsmWay extends BaseElement {
-  type: OsmTypes.WAY;
+  type: 'way';
   nodes: OsmNode[];
 }
 
 interface OsmApiWay extends BaseElement {
-  type: OsmTypes.WAY;
+  type: 'way';
   nodes: number[];
 }
 
@@ -37,19 +31,19 @@ type Member = BaseElement & {
 };
 
 interface OsmRelation extends BaseElement {
-  type: OsmTypes.RELATION;
+  type: 'relation';
   members?: Member[];
 }
 
 interface Changeset {
-  type: OsmTypes.CHANGESET;
+  type: 'changeset';
   version?: string;
   generator?: string;
   tags?: { [key: string]: string };
 }
 
 interface OsmChange {
-  type: OsmTypes.OSMCHANGE;
+  type: 'osmchange';
   version?: string;
   generator?: string;
   create?: BaseElement[];
@@ -57,4 +51,4 @@ interface OsmChange {
   delete?: BaseElement[];
 }
 
-export { BaseElement, OsmNode, OsmWay, OsmApiWay, OsmRelation, Changeset, OsmChange, Member, OsmTypes };
+export { BaseElement, OsmNode, OsmWay, OsmApiWay, OsmRelation, Changeset, OsmChange, Member, OsmElementType };
