@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: node-osm-elements
+  description: Library for OSM related interfaces and utilities 
+  tags: 
+  - TypeScript
+  links:
+  - url: https://www.npmjs.com/package/@map-colonies/node-osm-elements
+    title: NPM
+spec:
+  type: library
+  lifecycle: production
+  owner: vector-team
+  system: vector-ingestion
