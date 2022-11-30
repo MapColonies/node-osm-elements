@@ -4,7 +4,7 @@ metadata:
   name: node-osm-elements
   description: Library for OSM related interfaces and utilities 
   tags: 
-  - TypeScript
+  - typescript
   links:
   - url: https://www.npmjs.com/package/@map-colonies/node-osm-elements
     title: NPM
